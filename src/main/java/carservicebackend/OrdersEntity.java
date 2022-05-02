@@ -1,111 +1,90 @@
 package carservicebackend;
 
 import javax.persistence.*;
-import java.util.Objects;
 
 @Entity
-@Table(name = "ORDERS", schema = "ORDERS")
+@Table(name = "orders", schema = "orders")
 public class OrdersEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
-    @Column(name = "ID", nullable = false)
-    private int id;
+    @Column(name = "id", nullable = false)
+    private int Id;
     @Basic
-    @Column(name = "FULLNAME", nullable = true, length = 256)
-    private String fullname;
+    private String fullName;
     @Basic
-    @Column(name = "PHONENUMBER", nullable = true, length = 256)
-    private String phonenumber;
+    private String phoneNumber;
     @Basic
-    @Column(name = "STATENUMBER", nullable = true, length = 256)
-    private String statenumber;
+    private String stateNumber;
     @Basic
-    @Column(name = "INSURANCETYPE", nullable = true, length = 256)
-    private String insurancetype;
+    private String insuranceType;
     @Basic
-    @Column(name = "INSURANCEPOLICYDATESTART", nullable = true, length = 256)
-    private String insurancepolicydatestart;
+    private String insurancePolicyDateStart;
     @Basic
-    @Column(name = "INSURANCEPOLICYDATEEND", nullable = true, length = 256)
-    private String insurancepolicydateend;
+    private String insurancePolicyDateEnd;
     @Basic
-    @Column(name = "INSPECTIONTYPE", nullable = true, length = 256)
-    private String inspectiontype;
+    private String inspectionType;
 
     public int getId() {
-        return id;
+        return Id;
     }
 
-    public void setId(int column1) {
-        this.id = column1;
+    public void setId(int id) {
+        Id = id;
     }
 
-    public String getFullname() {
-        return fullname;
+    public String getFullName() {
+        return fullName;
     }
 
-    public void setFullname(String fullname) {
-        this.fullname = fullname;
+    public void setFullName(String fullName) {
+        this.fullName = fullName;
     }
 
-    public String getPhonenumber() {
-        return phonenumber;
+    public String getPhoneNumber() {
+        return phoneNumber;
     }
 
-    public void setPhonenumber(String phonenumber) {
-        this.phonenumber = phonenumber;
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
     }
 
-    public String getStatenumber() {
-        return statenumber;
+    public String getStateNumber() {
+        return stateNumber;
     }
 
-    public void setStatenumber(String statenumber) {
-        this.statenumber = statenumber;
+    public void setStateNumber(String stateNumber) {
+        this.stateNumber = stateNumber;
     }
 
-    public String getInsurancetype() {
-        return insurancetype;
+    public String getInsuranceType() {
+        return insuranceType;
     }
 
-    public void setInsurancetype(String insurancetype) {
-        this.insurancetype = insurancetype;
+    public void setInsuranceType(String insuranceType) {
+        this.insuranceType = insuranceType;
     }
 
-    public String getInsurancepolicydatestart() {
-        return insurancepolicydatestart;
+    public String getInsurancePolicyDateStart() {
+        return insurancePolicyDateStart;
     }
 
-    public void setInsurancepolicydatestart(String insurancepolicydatestart) {
-        this.insurancepolicydatestart = insurancepolicydatestart;
+    public void setInsurancePolicyDateStart(String insurancePolicyDateStart) {
+        this.insurancePolicyDateStart = insurancePolicyDateStart;
     }
 
-    public String getInsurancepolicydateend() {
-        return insurancepolicydateend;
+    public String getInsurancePolicyDateEnd() {
+        return insurancePolicyDateEnd;
     }
 
-    public void setInsurancepolicydateend(String insurancepolicydateend) {
-        this.insurancepolicydateend = insurancepolicydateend;
+    public void setInsurancePolicyDateEnd(String insurancePolicyDateEnd) {
+        this.insurancePolicyDateEnd = insurancePolicyDateEnd;
     }
 
-    public String getInspectiontype() {
-        return inspectiontype;
+    public String getInspectionType() {
+        return inspectionType;
     }
 
-    public void setInspectiontype(String inspectiontype) {
-        this.inspectiontype = inspectiontype;
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        OrdersEntity that = (OrdersEntity) o;
-        return id == that.id && Objects.equals(fullname, that.fullname) && Objects.equals(phonenumber, that.phonenumber) && Objects.equals(statenumber, that.statenumber) && Objects.equals(insurancetype, that.insurancetype) && Objects.equals(insurancepolicydatestart, that.insurancepolicydatestart) && Objects.equals(insurancepolicydateend, that.insurancepolicydateend) && Objects.equals(inspectiontype, that.inspectiontype);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(id, fullname, phonenumber, statenumber, insurancetype, insurancepolicydatestart, insurancepolicydateend, inspectiontype);
+    public void setInspectionType(String inspectionType) {
+        this.inspectionType = inspectionType;
     }
 }
